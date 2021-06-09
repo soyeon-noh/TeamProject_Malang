@@ -14,23 +14,63 @@
 
       div.container {
         /* position: relative; */
-        display: flex;
-        background-color: red;
-      }
-
-      div.container div.inner_top {
-        background-color: green;
+        /* background-color: #AAA; */
         width: 1056px;
         margin: 0 auto;
       }
 
+      div.container div.inner_top {
+        background-color: rgb(139, 165, 139);
+
+        display: flex;
+      }
+
+      section.img_section {
+        border: 1px solid blue;
+        padding: 15px;
+        width: 560px;
+      }
       section.img_section div.image_preview {
         background-image: url("../images/ex.png");
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-color: yellow;
-        width: 500px;
-        height: 500px;
+        width: 520px;
+        height: 520px;
+      }
+
+      aside.product_aside {
+        border: 1px solid red;
+        margin: 36px 0;
+        padding: 16px;
+        
+      }
+
+      nav.product_nav {
+        background-color: #aaa;
+      }
+
+      ul.product_nav_ul{
+
+        display: flex;
+        list-style-type: none;
+      }
+
+      ul.product_nav_ul li{
+        padding: 22px 25px 20px 25px;
+        cursor: pointer;
+        color: white;
+        /* background-color: yellowgreen; */
+        
+      }
+
+      ul.product_nav_ul li:hover{
+        background-color: rgb(131, 131, 131);
+
+      }
+
+      article{
+        background-color: grey;
       }
     </style>
   </head>
@@ -38,12 +78,59 @@
   <body>
     <div id="container" class="container">
       <div class="inner_top">
-        이너탑
+        
         <section id="img_section" class="img_section">
-          이미지 섹션
-          <div class="image_preview">이미지</div>
+          <div class="image_preview"></div>
         </section>
+        <aside id="product_aside" class="product_aside">
+          <div>맴맴 작가</div>
+          <h2>🥐🍩와플 속에 쏙! 귀여운 일러스트🥐🍩</h2>
+          <table>
+            <tr>
+              <td>가격</td>
+              <td>9,900원</td>
+            </tr>
+            <tr>
+              <td>후기</td>
+              <td>★★★★☆ (240)</td>
+            </tr>
+            <tr>
+              <td>배송비</td>
+              <td>무료배송</td>
+            </tr>
+            <tr></tr>
+
+          </table>
+        </aside>
       </div>
+      <nav id="product_nav" class="product_nav">
+        <ul id="product_nav_ul" class="product_nav_ul">
+          <li>상세설명</li>
+          <li>배송/교환/환불</li>
+          <li>구매후기</li>
+          <li>문의</li>
+        </ul>
+      </nav>
+      <article>
+        <h2>상세설명</h2>
+        <hr>
+        <div>내용</div>
+      </article>
+      <article>
+        <h2>배송/교환/환불</h2>
+        <hr>
+        <div>내용</div>
+      </article>  
+      <article>
+        <h2>구매후기</h2>
+        <hr>
+        <div>내용</div>
+      </article>
+      <article>
+        <h2>문의</h2>
+        <hr>
+        <div>내용</div>
+      </article>
     </div>
   </body>
 </html>
