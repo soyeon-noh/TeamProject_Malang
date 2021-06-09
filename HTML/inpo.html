@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Info</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      div.container {
+        /* position: relative; */
+        display: flex;
+        background-color: red;
+      }
+
+      div.container div.inner_top {
+        background-color: green;
+        width: 1056px;
+        margin: 0 auto;
+      }
+
+      section.img_section div.image_preview {
+        background-image: url("../images/ex.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-color: yellow;
+        width: 500px;
+        height: 500px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container" class="container">
+      <div class="inner_top">
+        이너탑
+        <section id="img_section" class="img_section">
+          이미지 섹션
+          <div class="image_preview">이미지</div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
