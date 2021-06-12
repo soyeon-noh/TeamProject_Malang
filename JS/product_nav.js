@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const nav = document.querySelector("product_nav");
+  const nav = document.querySelector("nav#product_nav");
 
   const navClick = (e) => {
     let tagName = e.target.tagName;
-
+    alert("ㅇㅇ");
     if (tagName === "LI") {
       let className = e.target.className; // 클래스명 추출
       let section = document.querySelector("#" + className); // # + 클래스명
