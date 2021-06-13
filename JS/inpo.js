@@ -22,19 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const packClick = (e) => {
     alert("장바구니에 담았습니다.");
-  }
+  };
 
-  const quesClick = (e) => {
-    alert("문의글을 작성합니다.");
-  }
- 
-  const buyClick = (e) => {
-    alert("구매 페이지로 이동합니다.");
-  }
-  
   nav.addEventListener("click", navClick);
-  pack.addEventListener("click", packClick);
-  ques.addEventListener("click", quesClick);
-  buy.addEventListener("click", buyClick);
-
 });

@@ -6,196 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Info</title>
     <link rel="stylesheet" href="CSS/font.css">
+    <link rel="stylesheet" href="CSS/inpo.css">
     <script src="js/product_nav.js"></script>
     <style>
-      /*
-      #DEBA9B 갈색
-      #707070 회색
-      #F29A8C 핑크
 
-      */
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      div.container {
-        /* position: relative; */
-        /* background-color: #AAA; */
-        width: 1056px;
-        margin: 0 auto;
-      }
-
-      div.container div.inner_top {
-        border: 1px solid rgb(139, 165, 139);
-
-        display: flex;
-        justify-content: space-between;
-
-      }
-
-      section.img_section {
-        border: none;
-        padding: 15px;
-        width: 560px;
-        height: 560px;
-      }
-      section.img_section div.image_preview {
-        background-image: url("../images/ex2.png");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        width: 520px;
-        height: 520px;
-        margin: 0 auto;
-      }
-
-/* 사이드 */
-      aside {
-        width: 460px; /*음*/
-        height: 600px; 
-
-        border: 1px solid #DEBA9B;
-        margin: 15px 0 36px 36px;
-        padding: 20px 0px;
-
-        overflow: visible;
-      }
-
-      aside h3 {
-        
-      }
-
-      aside ul, aside ol {
-        list-style-type: none;
-      }
-
-      aside ul.title {
-        background-color: #DEBA9B;
-        
-        
-        padding: 10px;
-        text-align: center;
-      }
-
-      aside ol {
-        display: flex;
-      }
-
-      aside ol li, aside div.header {
-        padding: 5px 10px;
-      }
-
-      aside ol li:nth-of-type(1) {
-        width: 30%;
-      }
-
-      aside form.option select{
-        padding: 5px;
-        width: 250px;
-      }
-
-
-
-/* 네비게이션 */
-      nav.product_nav {
-        background-color: #999;
-      }
-
-      ul.product_nav_ul {
-        display: flex;
-        list-style-type: none;
-      }
-
-      ul.product_nav_ul li {
-        padding: 18px 25px 16px 25px;
+      table.review td:hover, table.question td:hover{
         cursor: pointer;
-        color:white;
-
-        font-size: 20px;
       }
-
-      /* ul.product_nav_ul li:first-child {
-        margin-left: 15px;
-      } */
-
-      ul.product_nav_ul li:hover {
-        background-color: #707070;
-      }
-
-/* 아티클 */
-      article.discription {
-        border: 1px solid grey;
-        padding: 26px;
-      }
-
-      article.discription article {
-        border: 1px solid green;
-        margin-bottom: 1rem;
-        padding: 1rem 0;
-      }
-
-      article h2 {
-        padding-bottom: 20px;
-      }
-
-/* 아티클 테이블 */
-      article.discription table {
-        border-collapse: collapse;
-        border-spacing: 0;
-        width: 100%;
-        margin: 0 auto;
-
-      }
-      
-      article.discription table th, td {
-        border-top: 1px solid #aaa;
-        padding: 10px;
-        max-width: 500px;
-
-        text-align: center;
-      }
-
-      article.discription table th {
-        background-color: #ccc;  
-      }
-
-      article.discription table td:nth-child(2) {
-        text-align: left;
-      }
-
-      article.discription table tr:last-child {
-        border-bottom: 1px solid #aaa;
-      }
-/* 상세설명 */
-      article.dis_1 div{
-        padding: 10px 25px;
-        text-align: center;
-      }
-
-/* 배송 교환 환불*/
-      table.delivery {
-      
-      }
-
-/* 구매후기 */
-      ul.review {
-        list-style-type: none;
-      }
-
-/* 버튼 */
-      div.btn_box{
-        width: 50%;
-        margin: 0 auto;
-      }
-
-      div.btn_box button {
-        padding: 10px;
-        width: 100px;
-      }
-
     </style>
-    <script src="/JS/product_nav.js"></script>
   </head>
 
   <body>
@@ -270,24 +88,25 @@
                 </li>
               </ol>
             </ul>
-            <div id="btn_box" class="btn_box">
-              <button id="btn_pack" class="btn_pack">장바구니</button>
-              <button id="btn_buy" class="btn_buy">구매하기</button>
-          </div>
+            <ul id="btn_box" class="btn_box">
+              <button id="btn_pack" class="btn_pack" type="button">장바구니</button>
+              <button id="btn_question" class="btn_question" type="button">문의하기</button>
+              <button id="btn_buy" class="btn_buy" type="button">구매하기</button>
+            </ul>
           </form>
 
         </aside>
       </div>
       <nav id="product_nav" class="product_nav">
         <ul id="product_nav_ul" class="product_nav_ul">
-          <li class="ul_1">상세설명</li>
-          <li class="ul_2">배송/교환/환불</li>
-          <li class="ul_3">구매후기</li>
-          <li class="ul_4">문의/답변</li>
+          <li class="art_1">상세설명</li>
+          <li class="art_2">배송/교환/환불</li>
+          <li class="art_3">구매후기</li>
+          <li class="art_4">문의/답변</li>
         </ul>
       </nav>
       <article id="discription" class="discription">
-        <article id="dis_1" class="dis_1">
+        <article id="art_1">
           <div>
             크레파스로 그린 듯한 따뜻한 느낌의 반려동물 그림이에요 (어류와
             파충류는 제작하지 않습니다.) <br>
@@ -320,7 +139,7 @@
             💛 원치 않으시는 분은 미리 말씀해주세요<br>
           </div>
         </article>
-        <article id="dis_2" class="dis_2">
+        <article id="art_2">
           <h2>배송/교환/환불</h2>
           
           <table id="delivery" class="delivery">
@@ -343,7 +162,7 @@
             </tr>
           </table>
         </article>
-        <article id="dis_3" class="dis_3">
+        <article id="art_3">
           <h2>구매후기</h2>
 
           <table id="review" class="review">
@@ -406,12 +225,12 @@
             </tr>
           </table>
         </article>
-        <article id="dis_4" class="dis_4">
+        <article id="art_4">
           <h2>문의 및 답변</h2>
           
           <table id="question" class="question">
             <th>문의자</th>
-            <th>제목</th>
+            <th>문의</th>
             <th>등록일</th>
             <tr>
               <td>군만두</td>
@@ -420,7 +239,7 @@
             </tr>
             <tr>
               <td>김치만두</td>
-              <td>배송 문의입니다.</td>
+              <td>언제쯤 완성되는지 궁금합니다.</td>
               <td>2021-06-05</td>
             </tr>
             <tr>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="CSS/inpo.css">
+<style>
+div.view_btn {
+	width: 80%;
+	margin: 10px auto;
+	text-align: right;
+}
+
+div.view_btn button {
+	margin: 5px;
+	padding: 8px;
+	outline: none;
+	border: none;
+	color: white;
+}
+
+div.view_btn button:nth-child(1) {
+	background-color: #2C7FE6;
+}
+div.view_btn button:nth-child(2) {
+	background-color: #82BF73;
+}
+div.view_btn button:nth-child(3) {
+	background-color: #E66391;
+}
+div.view_btn button:hover {
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+form.v1 {
+
+}
+</style>
+</head>
+<body>
+    <div id="container" class="container">
+	<form class="v1" method="POST">
+        <fieldset>
+        <h2>문의하기</h2> 
+
+            <ol>
+                <li>작성일</li>
+                <li>
+                    <input name="gb_date" 
+                    type="date" value="${GB.gb_date}">
+                </li>
+            </ol>
+            <ol>
+                <li>작성자</li>
+                <li>
+                    <input name="gb_writer"
+                    type="text" value="${GB.gb_writer}">
+                </li>
+            </ol>
+            <ol>
+                <li>비밀번호</li>
+                <li>
+                    <input name="gb_password" type="password">
+                </li>
+            </ol>
+            <ol>
+                <li>내용</li>
+                <li>
+                    <textarea name="gb_content" rows="5">${GB.gb_content}</textarea>
+                </li>
+            </ol>
+            <div class="view_btn">
+                <button class="btn_save" type="button">작성완료</button>
+                <button class="btn_home" type="button">돌아가기</button>
+            </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

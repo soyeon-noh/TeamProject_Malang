@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Info</title>
+    <link rel="stylesheet" href="CSS/font.css">
+    <link rel="stylesheet" href="CSS/inpo.css">
+    <script src=""></script>
+    <style>
+      div.review_img1 {
+        width: 80px;
+        height: 80px;
+        background-image: url(/images/ex2.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+
+      div.price_box {
+        border: 1px solid #777;
+      }
+
+      article#art_1 table.price_table {
+        margin-top: 30px;
+        font-size: 1.4rem;
+      }
+
+/* form 배송지정보,결제수단 */
+      div.pay_inpo {
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: space-between;
+      }
+
+      div.pay_inpo article {
+        flex: 1;
+      }
+
+      div.pay_inpo article#art_2{
+        margin-right: 40px;
+      }
+
+      div.pay_inpo article table td{
+        padding: 15px;
+      }
+
+      div.pay_inpo article#art_2 input{
+        outline: 0;
+        padding: 7px;
+        margin: 4px 0;
+
+        border: 1px solid #aaa;
+      }
+
+      div.pay_inpo article#art_2 input:focus{
+        border-color: #DEBA9B;
+      }
+
+      div.pay_inpo article#art_2 input.addr_dis{
+        width: 300px;
+        
+      }
+      /* 라디오 버튼 */
+      div.pay_inpo article#art_3 input[type='radio'],
+      div.pay_inpo article#art_3 input[type='radio']:checked {
+        appearance: none;
+        width: 1.4rem;
+        height: 1.4rem;
+        border-radius: 100%;
+        margin-right: 0.1rem;
+        cursor: pointer;
+      }
+
+      div.pay_inpo article#art_3 input[type='radio'] {
+        background-color: white;
+        border: 2px solid #777;
+      }
+
+      div.pay_inpo article#art_3 input[type='radio']:checked {
+        background-color: #f3d3b7;
+        border: 2px solid #DEBA9B;
+      }
+
+      /* 결제하기 */
+      div.btn_pay{
+        text-align: center;
+      }
+
+      form.pay_form button {
+        width: 400px;
+        padding: 20px;
+
+        border: none;
+        background-color: #DEBA9B;
+        border-radius: 10px;
+
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: white;
+
+        cursor: pointer;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+     
+      <article id="discription" class="discription">
+        <article id="art_1">
+          <h2>주문/결제</h2>
+          <table id="question" class="question">
+            <th colspan='2'>상품정보</th>
+            <th>판매자</th>
+            <th>배송비</th>
+            <th>수량</th>
+            <th>상품금액</th>
+            <tr>
+              <td>
+                <div class="review_img1"></div>  
+              </td>
+              <td>🥐🍩와플 속에 쏙! 귀여운 일러스트🥐🍩</td>
+              <td>맴맴 작가</td>
+              <td>0 원</td>
+              <td>1 개</td>
+              <td>9,900 원</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="review_img1"></div>  
+              </td>
+              <td>🥐🍩와플 속에 쏙! 귀여운 일러스트🥐🍩</td>
+              <td>맴맴 작가</td>
+              <td>0 원</td>
+              <td>1 개</td>
+              <td>9,900 원</td>
+            </tr>
+          </table>
+            <table class="price_table">
+              <tr>
+                <td>작품금액</td>
+                <td>배송비</td>
+                <td>결제 예정금액</td>
+              </tr>
+              <tr>
+                <td>9,900 원</td>
+                <td>+ 0 원</td>
+                <td>= 19,800 원</td>
+              </tr>
+            </table>
+        </article>
+
+
+        <form id="pay_form" class="pay_form">
+        <div id="pay_inpo" class="pay_inpo">
+          <article id="art_2">
+            <h2>배송지 정보</h2>
+            <table id="addr_table" class="addr_table">
+              <tr>
+                <td>주문고객</td>
+                <td>김만두 (010-0000-0000)</td>
+              </tr>
+              <tr>
+                <td>받는 사람</td>
+                <td>
+                  <input name="receiver">
+                </td>
+              </tr>
+              <tr>
+                <td>전화번호</td>
+                <td>
+                  <input name="tel">
+                </td>
+              </tr>
+              <tr>
+                <td>배송지</td>
+                <td>
+                  <input name="addr_num" placeholder="우편번호"><br>
+                  <input name="addr_dis" placeholder="주소" class="addr_dis">
+                </td>
+              </tr>
+            </table>
+          </article>
+          <article id="art_3">
+            <h2>결제 수단</h2>
+            <table id="pay_table" class="addr_table">
+              <tr>
+                <td>
+                  <input type="radio" name="pay_method" value="" checked> 
+                </td>
+                <td>
+                  <label>계좌 간편결제</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="radio" name="pay_method" value="" >
+                </td>
+                <td>
+                  <label>카드 간편결제</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="radio" name="pay_method" value="" >
+                </td>
+                <td>
+                  <label>일반결제</label>
+                </td>
+              </tr>
+            </table>
+          </article>
+        </div>
+        <div class="btn_pay">
+          <button>
+            결제하기
+          </button>
+        </div>
+        </form>
+
+      </article>
+
+
+    </div>
+  </div>
+  </body>
+</html>
